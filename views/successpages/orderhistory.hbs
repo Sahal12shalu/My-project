@@ -209,17 +209,15 @@ body {
         <p class="type"><strong>Type:</strong> Delivery</p>
         </div>
         <p class="payment-method mt-1"><strong>Payment :</strong> {{this.paymentmethod}}</p>
-
-        {{#each this.product}}
+      </div>
+    </div>
+    {{#each this.product}}
         <ul style="font-family: 'Times New Roman', Times, serif;" class="d-flex items">
-         
+          <div class="col-2"><p><strong>{{this.product.quantity}}×{{this.product.prize}}</strong></p></div>
           <div class="col-5"><strong><span style="margin-left: 10px;">{{this.product.productname}}</strong></span></div>
           <div class="col-4"><strong><li style="margin-left: 20px;">{{this.product.totalprize}}</strong></li></div>
         </ul>
         {{/each}}
-        
-      </div>
-    </div>
     <div class="order-footer">
       <div class="price-breakdown">
         <p>Item Total: ₹{{this.totalamount}}</p>
