@@ -19,7 +19,7 @@ router.post('/adminlogin1',function(req,res){
 router.post('/hoteldetails',function(req,res){
   adminhelper.Addhoteldetail(req.body).then((id)=>{
     let image=req.files.image
-    image.mv('./public/images/hotelpicture/'+id+'.jpg',function(err){
+    image.mv('/public/images/hotelpicture/'+id+'.jpg',function(err){
       if(err){
       res.redirect('/')
       }
